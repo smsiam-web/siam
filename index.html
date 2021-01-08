@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>javaScript</title>
+    </head>
+    <body>
+      <h1>javaScript</h1>
+
+
+
+
+        <script src="setting.js" type="text/javaScript">
+
+              var ownNum = 0;
+              var lostNum = 0;
+              
+              for (var i=1; i<=5; i++) {
+              
+              var guessNum= parseInt(prompt("Enter a Number Between 1 to 5 : "));
+              
+              var randomNum = Math.floor(Math.random() * 5) + 1;
+              
+              if (guessNum <= 0 || guessNum >5){
+                  console.log("Your input number was wrong");
+                 
+                  alert("Uuupppss...!!!! Your Input Number was wrong. That's why you don't continue this game at this moment. Please try again & refresh your browser" );
+                  break;
+                  
+                  // window.stop();
+              }else if(guessNum === 0){
+                  console.log("0 is Invlaid Number");
+              }
+              else if(guessNum === randomNum){
+                  console.log("You have won");
+                  ownNum++;
+              }else{
+                  console.log("You have lost. Rendom number was " + randomNum);
+                  lostNum++;
+              }
+              
+              
+              }
+              document.write("You have Own : " + ownNum + "times <br>");
+              document.write("You have Lost : " + lostNum + "times");
+
+        </script>
+    </body>
+</html>
