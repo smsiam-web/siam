@@ -39,10 +39,10 @@ if (guessNum <= 0 || guessNum >5){
     console.log("0 is Invlaid Number");
 }
 else if(guessNum === randomNum){
-    console.log("You have won");
+    alert("You have won");
     ownNum++;
 }else{
-    console.log("You have lost. Rendom number was " + randomNum);
+    alert("You have lost. Rendom number was " + randomNum);
     lostNum++;
 }
 
